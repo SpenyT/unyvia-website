@@ -1,6 +1,4 @@
-import React from 'react';
-
-import '../styles/about-us.css';
+import '../styles/pageStyles/about-us.css';
 
 export function AboutUs() {
 

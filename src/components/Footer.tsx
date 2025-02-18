@@ -1,11 +1,9 @@
-import React from 'react';
-
-import '../styles/footer.css';
+import '../styles/componentStyles/footer.css';
 
 export function footer() {
 
     return (
-        <div className="footer-container">
+        <div className="footer-container" id="footer-section">
 
         </div>
     );

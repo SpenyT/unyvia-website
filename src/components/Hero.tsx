@@ -1,11 +1,9 @@
-import React from 'react';
-
-import '../styles/hero.css';
+import '../styles/componentStyles/hero.css';
 
 export function Hero() {
 
     return (
-        <div className="hero-container">
+        <div className="hero-container" id="hero-section">
 
         </div>
     );

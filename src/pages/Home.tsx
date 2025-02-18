@@ -1,6 +1,4 @@
-import React from 'react';
-
-import '../styles/home.css';
+import '../styles/pageStyles/home.css';
 
 export function Home() {
 

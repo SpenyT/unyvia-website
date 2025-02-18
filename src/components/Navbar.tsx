@@ -1,11 +1,9 @@
-import React from 'react';
-
-import '../styles/navbar.css';
+import '../styles/componentStyles/navbar.css';
 
 export function Navbar() {
 
     return (
-        <div className="navbar-container">
+        <div className="navbar-container" id="navbar-section">
 
         </div>
     );
