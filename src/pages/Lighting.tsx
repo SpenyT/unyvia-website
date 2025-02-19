@@ -1,6 +1,6 @@
 import '../styles/pageStyles/lighting.css';
 
-export function Lighting() {
+export default function Lighting() {
 
     return (
         <div className="lighting-container">

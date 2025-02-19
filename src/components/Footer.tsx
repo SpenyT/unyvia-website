@@ -1,9 +1,9 @@
 import '../styles/componentStyles/footer.css';
 
-export function footer() {
+export default function Footer() {
 
     return (
-        <div className="footer-container" id="footer-section">
+        <div className="footer">
 
         </div>
     );

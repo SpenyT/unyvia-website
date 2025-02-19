@@ -1,10 +1,10 @@
 import '../styles/componentStyles/hero.css';
 
-export function Hero() {
+export default function Hero() {
 
     return (
-        <div className="hero-container" id="hero-section">
-
+        <div className="hero">
+            Hero
         </div>
     );
 }

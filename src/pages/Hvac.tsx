@@ -1,6 +1,6 @@
 import '../styles/pageStyles/hvac.css';
 
-export function Hvac() {
+export default function Hvac() {
 
     return (
         <div className="hvac-container">

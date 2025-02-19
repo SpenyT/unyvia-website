@@ -1,6 +1,6 @@
 import '../styles/pageStyles/about-us.css';
 
-export function AboutUs() {
+export default function AboutUs() {
 
     return (
         <div className="about-container">

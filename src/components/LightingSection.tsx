@@ -1,10 +1,10 @@
 import '../styles/componentStyles/landing-content.css';
 import '../styles/componentStyles/lighting-section.css';
 
-export function LightingSection() {
+export default function LightingSection() {
 
     return (
-        <div className="landing-content lighting-section-container" id="lighting-section">
+        <div className="landing-content lighting-section">
 
         </div>
     );
