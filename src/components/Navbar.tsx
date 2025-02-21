@@ -17,8 +17,8 @@ import '../styles/componentStyles/navbar.css';
 export default function Navbar() {
 
     return (
-        <nav className="navbar">
-            <div className="navbar-container">
+        <header className="navbar">
+            <nav className="navbar-container">
                 <Link to="/">
                     <div className="navbar-logo">
                         {/* <img src="/" /> */}
@@ -32,7 +32,7 @@ export default function Navbar() {
                     <Link to="/hvac"><button className="navbar-button">Hvac</button></Link>
                     <Link to="/about-us"><button className="navbar-button">About Us</button></Link>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
     );
 }
