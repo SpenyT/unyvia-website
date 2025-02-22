@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import LogoName from './LogoName';
 
 import '../styles/componentStyles/navbar.css';
 
@@ -20,11 +21,7 @@ export default function Navbar() {
         <header className="navbar">
             <nav className="navbar-container">
                 <Link to="/">
-                    <div className="navbar-logo">
-                        {/* <img src="/" /> */}
-                        <div className='test-img-placeholder'/>
-                        <h2>UNYVIA</h2>
-                    </div>
+                    <LogoName />
                 </Link>
                 <div className="navbar-buttons">
                     <Link to="/"><button className="navbar-button">Home</button></Link>
