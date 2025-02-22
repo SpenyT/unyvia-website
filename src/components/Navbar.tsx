@@ -21,7 +21,7 @@ export default function Navbar() {
         <header className="navbar">
             <nav className="navbar-container">
                 <Link to="/">
-                    <LogoName />
+                    <div className="logo"><LogoName /></div>
                 </Link>
                 <div className="navbar-buttons">
                     <Link to="/"><button className="navbar-button">Home</button></Link>

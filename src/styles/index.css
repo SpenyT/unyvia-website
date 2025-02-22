@@ -27,7 +27,6 @@
 
 body {
     margin: 0;
-    min-block-size: 100vh;
     background-color: var(--color-grey-green-050);
     color: var(--color-brand-dark);
     font-size: var(--font-size-step-0);
