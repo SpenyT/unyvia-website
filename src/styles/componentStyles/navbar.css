@@ -2,22 +2,37 @@
     position: sticky;
     inset-block-start: 0;
     z-index: 2;
+    
+  
+    
+}
+.check{
+    display: none;
+    
 }
 
 .navbar-container {
     display: flex;
-    flex-direction: row;
+    min-height: 4em;
     height: 100%;
+    width: 100%;
     align-items: center;
-    margin: 0 280px;
+    justify-content: center;
+    margin:auto;
+    position: relative;
+   
     backdrop-filter: blur(8px);
+
+  
 }
+
 
 .navbar-buttons {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 8px;
+   
 }
 
 .navbar-button {
@@ -27,11 +42,98 @@
     padding: 0 12px;
     justify-content: center;
     text-align: center;
+   
 }
 
 .test-img-placeholder {
     height: 30px;
     width: 30px;
     background-color: aqua;
+}
+
+.logo{
+    
+    left: 0;
+    position: absolute;
+}
+
+
+.menu-btn{
+    display: none;
+
+}
+.close-menu{
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .navbar-buttons{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+      
+        background-color: black;
+        align-items: center;
+        
+        
+        top: 0;right: 0;
+        transform: translateX(100%);
+        /* transform: perspective(500px) rotateY(-90deg); */
+        /* display: none; */
+        
+    }
+    .check:checked ~ .navbar-buttons{
+        
+        transform: translateX(0);
+    }
+    
+
+    .menu-btn {
+        position: fixed;
+        display: block;
+        top: 20px;
+        right: 40px;
+        
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+        text-align: center;
+        cursor: pointer;
+        z-index: 3;
+    }
+    
+    .bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 40px;
+        height: 1px;
+        background: #fff;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+        -webkit-transform-origin: left top;
+        -ms-transform-origin: left top;
+        transform-origin: left top;
+    }
+    
+    .bar.middle {
+        top: 15px;
+        opacity: 1;
+    }
+    
+    .bar.bottom {
+        top: 30px;
+        -webkit-transform-origin: left bottom;
+        -ms-transform-origin: left bottom;
+        transform-origin: left bottom;
+    }
+      
+
+
+    
+    
 }
 
