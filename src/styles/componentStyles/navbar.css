@@ -71,7 +71,9 @@
     overflow: hidden;
     z-index: 1;
     transition: all 0.2s ease-in-out;
+    color:rgba(255,255,255)
 }
+
 
 .navbar-button::before {
     content: '';
@@ -97,6 +99,7 @@
 .navbar-button:hover::before {
     background-position: -100% 0;
 }
+
 
 
 

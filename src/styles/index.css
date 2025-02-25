@@ -43,7 +43,7 @@ body {
     margin: 0;
     min-block-size: 100vh;
     background-image: var(--unyvia_navy_gradient);
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     line-height: inherit;
     -webkit-font-smoothing: antialiased;
 }
