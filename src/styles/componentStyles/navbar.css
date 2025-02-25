@@ -69,7 +69,9 @@
     justify-content: center;
     text-align: center;
     transition: all 0.2s ease-in-out;
+    color:rgba(255,255,255)
 }
+
 
 /* .navbar-button:hover{
     background: linear-gradient(145deg, #0d1b23, #0b171e);
