@@ -15,11 +15,11 @@
     }
 }
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
-    padding: 1em 0;
-    
+    padding: 1em 0 0 0;
     z-index: 2;
+    width: 100%;
 }
 
 
@@ -37,8 +37,8 @@
     border-radius: 20px;
     border: 1px solid var(--unyvia_navy2);
     background: linear-gradient(145deg, #0d1b23, #0b171e);
-    box-shadow:  12px 12px 24px #070f14,
-                    -12px -12px 24px #11232e;
+    /* box-shadow:  12px 12px 24px #070f14,
+                    -12px -12px 24px #11232e; */
     
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
@@ -48,11 +48,44 @@
 .logo {
     position: absolute;
     left: 0;
-    transform: translate(0, -50%);
+}
+
+.takeme-button-container {
+    text-decoration: none;
+    position: absolute;
+    right: 1em;
+}
+
+.takeme-button {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2em 1.2em;
+    color: white;
+    border-radius: 1000px;
+    background: linear-gradient(15deg, var(--unyvia_green), var(--unyvia_lightgreen), var(--unyvia_green)) no-repeat;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+    background-size: 300%;
+    background-position: left center;
+    transition: all 0.2s ease-in-out;
+}
+/* --unyvia_green: rgb(69, 151, 47);
+--unyvia_lightgreen: rgb(152, 196, 79); */
+.takeme-button:hover {
+    background-size: 320%;
+    background-position: right center;
+}
+
+.takeme-button:active {
+    transform: scale(0.95);
+    box-shadow: none;
 }
 
 .navbar-buttons {
-    height: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -61,16 +94,19 @@
 }
 
 .navbar-button {
+    text-decoration: none;
+    color: var(--unyvia_white);
     position: relative;
     margin: 0 auto;
     padding: 0.2em 1.2em;
     border-radius: 15px;
     border: none;
-    background-color: var(--unyvia_navy);
+    background-color: transparent;
     text-align: center;
     overflow: hidden;
     z-index: 1;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .navbar-button::before {
@@ -79,26 +115,20 @@
     inset: 0;
     border-radius: 1000px;
     padding: 2px;
-    background: linear-gradient(to right, var(--unyvia_navy), var(--unyvia_navy), var(--unyvia_navy), var(--unyvia_navy), var(--unyvia_lightgreen), var(--unyvia_green), var(--unyvia_green));
-    -webkit-mask: 
-        linear-gradient(#fff 0 0) content-box, 
-        linear-gradient(#fff 0 0);
+    background: linear-gradient(to right, var(--unyvia_navy), var(--unyvia_navy), var(--unyvia_lightgreen), var(--unyvia_green));
     mask: 
         linear-gradient(#fff 0 0) content-box, 
         linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor; 
     mask-composite: exclude;
     transition: all 0.4s ease;
     background-position: 0 100%;
-    background-size: 200% 100%;
+    background-size: 300% 100%;
     z-index: -1;
 }
 
 .navbar-button:hover::before {
-    background-position: -100% 0;
+    background-position: -50% 0;
 }
-
-
 
 .navbar-dropdown-button {
     display: flex;
@@ -116,6 +146,16 @@
 
 .navbar-button:hover .dropdown-menu-svg {
     transform: rotate(0deg) translate(0%, 10%)
+}
+
+.active {
+    .navbar-button::before {
+        background-position: -50% 0;
+    }
+
+    .dropdown-menu-svg {
+        transform: rotate(0deg) translate(0%, 10%)
+    }
 }
 
 
