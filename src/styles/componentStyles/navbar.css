@@ -56,6 +56,11 @@
     right: 1em;
 }
 
+.takeme-button-container-small{
+    display: none;
+}
+
+
 .takeme-button {
     display: flex;
     position: relative;
@@ -85,13 +90,14 @@
     box-shadow: none;
 }
 
-.navbar-buttons {
+.navbar-buttons, .navbar-buttons-closed, .navbar-buttons-open{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     gap: 1em;
 }
+
 
 .navbar-button {
     text-decoration: none;
@@ -109,6 +115,8 @@
 
     cursor: pointer;
     color:rgba(255,255,255)
+
+}
 
 
 
@@ -132,6 +140,7 @@
 .navbar-button:hover::before {
     background-position: -50% 0;
 }
+
 
 .navbar-dropdown-button {
     display: flex;
@@ -162,7 +171,7 @@
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1146px) {
 
     
    
@@ -186,6 +195,10 @@
             transform: translateX(100%);
             opacity: 0;
         }
+    }
+
+    .navbar-container{
+        width: clamp(330px, 90%, 900px);
     }
 
     .navbar-buttons{
@@ -245,7 +258,7 @@
         background-color: transparent;
         border: transparent;
         padding: 0 12px;
-        height: 100%;
+        
         justify-content: center;
         text-align: center;
 
@@ -253,7 +266,14 @@
         /* border-radius: 15px; */
     }
    
+    .takeme-button-container {
+        text-decoration: none;
+        position: absolute;
+        right: 1em;
+        transform: translateX(-100%);
+    }
     
+
 
     .menu-btn {
         position: fixed;
@@ -308,7 +328,15 @@
     }
 
 
-    
+    @media screen and (max-width: 480px){
+        .takeme-button-container{display: none;}
+        .takeme-button-container-small{
+            display: inline;
+            text-decoration: none;
+            
+            right: 1em;
+        }
+    }
     
 }
 

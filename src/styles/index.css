@@ -61,7 +61,6 @@ body {
     min-block-size: 100vh;
 
     background-repeat: no-repeat;
-
     background-image: var(--unyvia_navy_gradient);
 
     line-height: inherit;
