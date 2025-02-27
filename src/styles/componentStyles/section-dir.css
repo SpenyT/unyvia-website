@@ -1,0 +1,118 @@
+.section-dir {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.segment-container {
+    width: 100%;
+    height: 80em;
+    flex: none;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(135deg, orange 0%, white 25%);
+}
+
+.main-spin {
+    width: 80em;
+    height: 80em;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: calc((100vw - 80em) / 2);
+    animation: rotation 30s infinite linear;
+    will-change: transform;
+}
+
+.segment {
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+
+    pointer-events: none;
+}
+
+path {
+    pointer-events: all;
+}
+
+.icon {
+    height: 50%;
+    width: 75%;
+    padding-top: 10px;
+    will-change: transform;
+    animation: rotation 30s infinite linear;
+    animation-direction: reverse;
+    will-change: transform;
+}
+
+#segment-lighting {
+    color: var(--lighting-theme);
+    transform-origin: var(--origin);
+    transform: rotate(144deg) translate(var(--x-axis-trans), var(--y-axis-trans));
+    transition: all 0.5s ease-in-out;
+}
+#segment-lighting:has(path:hover),
+#segment-lighting:has(.icon:hover) {
+    transform: rotate(144deg) translate(var(--x-axis-trans), var(--y-axis-hover));
+}
+
+#segment-audits {
+    color: var(--audits-theme);
+    transform-origin: var(--origin);
+    transform: rotate(-144deg) translate(var(--x-axis-trans), var(--y-axis-trans));
+    transition: all 0.5s ease-in-out;
+}
+#segment-audits:has(path:hover),
+#segment-audits:has(.icon:hover) {
+    transform: rotate(-144deg) translate(var(--x-axis-trans), var(--y-axis-hover));
+}
+
+#segment-hvac {
+    color: var(--hvac-theme);
+    transform-origin: var(--origin);
+    transform: rotate(-72deg) translate(var(--x-axis-trans), var(--y-axis-trans));
+    transition: all 0.5s ease-in-out;
+}
+#segment-hvac:has(path:hover),
+#segment-hvac:has(.icon:hover) {
+    transform: rotate(-72deg) translate(var(--x-axis-trans), var(--y-axis-hover));
+}
+
+#segment-decarb {
+    color: var(--decarb-theme);
+    transform-origin: var(--origin);
+    transform: translate(var(--x-axis-trans), var(--y-axis-trans));
+    transition: all 0.5s ease-in-out;
+}
+#segment-decarb:has(path:hover),
+#segment-decarb:has(.icon:hover) {
+    transform: translate(var(--x-axis-trans), var(--y-axis-hover));
+}
+
+#segment-finance {
+    color: var(--finance-theme);
+    transform-origin: var(--origin);
+    transform: rotate(72deg) translate(var(--x-axis-trans), var(--y-axis-trans));
+    transition: all 0.5s ease-in-out;
+}
+#segment-finance:has(path:hover),
+#segment-finance:has(.icon:hover) {
+    transform: rotate(72deg) translate(var(--x-axis-trans), var(--y-axis-hover));
+}
+
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}

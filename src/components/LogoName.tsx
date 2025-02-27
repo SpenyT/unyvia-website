@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 import '../styles/componentStyles/logo-name.css';
 // import LogoSphere from '../assets/unyvia-sphere-logo.svg?react';
@@ -8,18 +9,15 @@ import LogoInnerRing from '../assets/unyvia-inner-ring.svg?react';
 
 
 const LogoName = React.memo(() => {
-
-
-
     return (
-        <div className="logo-box">
+        <Link className="logo-box" to="/">
             <div className="logo-container">
                 <LogoSphereFull className="unyvia-sphere" />
                 <LogoOuterRing className="logo-outer-ring"/>
                 <LogoInnerRing className="logo-inner-ring" />
             </div>
             <h2>UNYVIA</h2>
-        </div>
+        </Link>
     );
 });
 

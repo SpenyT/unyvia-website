@@ -17,6 +17,23 @@
 
     --green_gradient: linear-gradient(to bottom, var(--unyvia_lightgreen), var(--unyvia_green));
     --green_gradient2: linear-gradient(to bottom, var(--unyvia_green), var(--unyvia_lightgreen));
+
+    /* --background-gradient: linear-gradient(); */
+
+
+    /* lighting theme */
+    --lighting-theme: #ff8c00;
+    --hvac-theme: #45972f;
+    --audits-theme: #007bff;
+    --decarb-theme: #8b3dff;
+    --finance-theme: #ffd700;
+
+    --theme: white;
+
+    --origin: center center;
+    --x-axis-trans: 5%;
+    --y-axis-trans: 53%;
+    --y-axis-hover: calc(var(--y-axis-trans) + 3em);
 }
 
 
@@ -27,7 +44,7 @@
 
     color-scheme: light dark;
     color: rgba(255, 255, 255);
-    background-color: var(--unyvia_navy_gradient);
+    background-color: white;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -42,10 +59,17 @@
 body {
     margin: 0;
     min-block-size: 100vh;
+
+    background-repeat: no-repeat;
+
     background-image: var(--unyvia_navy_gradient);
-    /* background-repeat: no-repeat; */
+
     line-height: inherit;
     -webkit-font-smoothing: antialiased;
+}
+
+body:type[darkmode] {
+    --theme: black;
 }
 
 
@@ -80,4 +104,16 @@ button,select {
 
 button:hover {
     cursor: pointer;
+}
+
+
+
+.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.inactive {
+    visibility: hidden;
+    opacity: 0;
 }
