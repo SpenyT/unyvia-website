@@ -90,13 +90,14 @@
     box-shadow: none;
 }
 
-.navbar-buttons {
+.navbar-buttons, .navbar-buttons-closed, .navbar-buttons-open{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     gap: 1em;
 }
+
 
 .navbar-button {
     text-decoration: none;

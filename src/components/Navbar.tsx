@@ -36,10 +36,7 @@ export default function Navbar() {
                         Services
                         <DropDownSvg className="dropdown-menu-svg"/>
                     </div>
-                  
-                    <Link className="navbar-button" to="/lighting">Lighting</Link>
-                    <Link className="navbar-button" to="/hvac">Hvac</Link>
-                    <Link className="navbar-button" to="/about-us">About Us</Link>
+                
                     
      
                     <Link className="navbar-button" to="/lighting">Lighting</Link>
