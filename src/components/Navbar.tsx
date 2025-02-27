@@ -27,19 +27,25 @@ export default function Navbar() {
             <nav className="navbar-container">
                 <div className="logo"><LogoName /></div>
                 <div className={menuOpen ? "navbar-buttons-open" : hamburgerClicked ? "navbar-buttons-closed" :  "navbar-buttons" }>
+
                     <Link className="takeme-button-container-small" to="/">
                         <div className="takeme-button">Take Me</div>
                     </Link>
+
                     <div className="navbar-button navbar-dropdown-button" onClick={servicesToggleClick}>
                         Services
                         <DropDownSvg className="dropdown-menu-svg"/>
                     </div>
-                    
-
+                  
                     <Link className="navbar-button" to="/lighting">Lighting</Link>
                     <Link className="navbar-button" to="/hvac">Hvac</Link>
                     <Link className="navbar-button" to="/about-us">About Us</Link>
                     
+     
+                    <Link className="navbar-button" to="/lighting">Lighting</Link>
+                    <Link className="navbar-button" to="/hvac">Hvac</Link>
+                    <Link className="navbar-button" to="/about-us">About Us</Link>
+
                 </div>
                 <Link className="takeme-button-container" to="/">
                         <div className="takeme-button">Take Me</div>
@@ -50,7 +56,10 @@ export default function Navbar() {
                      <span className="bar middle"></span>
                      <span className="bar bottom"></span>
                 </div>
-              
+                <Link className="takeme-button-container" to="/">
+                    <div className="takeme-button">Take Me</div>
+                </Link>
+
             </nav>
         </header>
     );
