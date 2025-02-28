@@ -33,12 +33,18 @@ export default function Navbar() {
                     </Link>
 
                     <div className="navbar-button navbar-dropdown-button" onClick={servicesToggleClick}>
-                        Services
-                        <DropDownSvg className="dropdown-menu-svg"/>
+
+                        <div className='navbar-button-main'>
+                            Services
+                            <DropDownSvg className="dropdown-menu-svg"/>
+                        </div>
+                        <div className='dropdown-menu'>
+                            <Link className="dropdown-menu-button" to="/lighting">Lighting</Link>
+                            <Link className="dropdown-menu-button" to="/hvac">Hvac</Link>
+                            <Link className="dropdown-menu-button" to="/about-us">About Us</Link>
+                        </div>
                     </div>
                 
-                    
-     
                     <Link className="navbar-button" to="/lighting">Lighting</Link>
                     <Link className="navbar-button" to="/hvac">Hvac</Link>
                     <Link className="navbar-button" to="/about-us">About Us</Link>
