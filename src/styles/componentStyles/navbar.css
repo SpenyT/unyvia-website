@@ -36,7 +36,7 @@
 
     border-radius: 20px;
     border: 1px solid var(--unyvia_navy2);
-    background: linear-gradient(145deg, #0d1b23, #0b171e);
+    background: linear-gradient(145deg, rgba(13, 27, 35, 0.7), rgba(11, 23, 30, 0.7));
     /* box-shadow:  12px 12px 24px #070f14,
                     -12px -12px 24px #11232e; */
     
