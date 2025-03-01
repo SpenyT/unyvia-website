@@ -1,4 +1,23 @@
 .footer {
-    height: 300vh;
     width: 100%;
+    background: var(--footer-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+
+}
+
+
+
+.footer-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.socials-container {
+    
 }

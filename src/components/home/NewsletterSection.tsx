@@ -1,6 +1,6 @@
 
-import '../styles/componentStyles/landing-content.css';
-import '../styles/componentStyles/news-letter.css';
+import '../../styles/componentStyles/landing-content.css';
+import '../../styles/componentStyles/newsletter-section.css';
 
 export default function NewsletterSection() {
 

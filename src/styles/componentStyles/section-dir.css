@@ -1,32 +1,88 @@
 .section-dir {
     width: 100%;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    background: radial-gradient(ellipse 50% 80% at center 80%,
+        hsl(0, 0%, 100%) 0%,
+        hsla(0, 0%, 100%, 0.738) 19%,
+        hsla(0, 0%, 100%, 0.541) 34%,
+        hsla(0, 0%, 100%, 0.382) 47%,
+        hsla(0, 0%, 100%, 0.278) 56.5%,
+        hsla(0, 0%, 100%, 0.194) 65%,
+        hsla(0, 0%, 100%, 0.126) 73%,
+        hsla(0, 0%, 100%, 0.075) 80.2%,
+        hsla(0, 0%, 100%, 0.042) 86.1%,
+        hsla(0, 0%, 100%, 0.021) 91%,
+        hsla(0, 0%, 100%, 0.008) 95.2%,
+        hsla(0, 0%, 100%, 0.002) 98.2%,
+        hsla(0, 0%, 100%, 0) 100%
+    );
+
+    --spin-size: 40em;
 }
 
 .segment-container {
     width: 100%;
-    height: 80em;
-    flex: none;
+    height: 100%;
     position: relative;
-    overflow: hidden;
-    background-image: linear-gradient(135deg, orange 0%, white 25%);
+    pointer-events: none;
+}
+.spin-container-reflection {
+    position: relative;
+    width: 100%;
+    pointer-events: none;
+    height: 15em;
+    justify-content: center;
+    align-items: center;
 }
 
+.reflection-wrapper {
+    transform: rotateX(75deg) scaleY(-1);
+}
+
+.mask-gradient {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    filter: saturate(100%); 
+    backdrop-filter: blur(1px);
+    background: radial-gradient(rgb(255, 255, 255, 0.7)0%, rgb(255, 255, 255, 0.5) 25%, rgb(255, 255, 255, 0) 90%);
+    z-index: 1;
+}
+
+
 .main-spin {
-    width: 80em;
-    height: 80em;
+    width: var(--spin-size);
+    height: var(--spin-size);
     justify-content: center;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: calc((100vw - 80em) / 2);
+    top: calc((100vh - var(--spin-size)) / 2);
+    left: calc((100vw - var(--spin-size)) / 2);
     animation: rotation 30s infinite linear;
     will-change: transform;
+    pointer-events: none;
+}
+
+.main-spin-reflection {
+    width: var(--spin-size);
+    height: var(--spin-size);
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: absolute;
+    top: 5em;
+    left: calc((100vw - var(--spin-size)) / 2);
+    animation: rotation 30s infinite linear;
+    will-change: transform;
+    pointer-events: none;
 }
 
 .segment {
@@ -34,77 +90,88 @@
     flex-direction: column;
     display: flex;
     align-items: center;
-
     pointer-events: none;
+    gap: 10px;
 }
 
-path {
+path:not(.reflection path) {
+    cursor: pointer;
     pointer-events: all;
 }
 
 .icon {
     height: 50%;
     width: 75%;
-    padding-top: 10px;
-    will-change: transform;
+    cursor: pointer;
     animation: rotation 30s infinite linear;
     animation-direction: reverse;
     will-change: transform;
 }
 
-#segment-lighting {
-    color: var(--lighting-theme);
-    transform-origin: var(--origin);
-    transform: rotate(144deg) translate(var(--x-axis-trans), var(--y-axis-trans));
+.segment-lighting {
+    color: rgba(var(--lighting-theme), 0.6);
+    transform: var(--lighting-segment-rotation) var(--section-dir-translate);
     transition: all 0.5s ease-in-out;
 }
-#segment-lighting:has(path:hover),
-#segment-lighting:has(.icon:hover) {
-    transform: rotate(144deg) translate(var(--x-axis-trans), var(--y-axis-hover));
+.segment-lighting:hover,
+.segment-lighting[data-hovered=true] {
+    transform: var(--lighting-segment-rotation) var(--section-dir-hover);
+    color: rgba(var(--lighting-theme), 1);
+    -webkit-filter: drop-shadow( 0px 0px 20px rgba(var(--lighting-theme), .5));
+    filter: drop-shadow( 0px 0px 20px rgba(var(--lighting-theme), .5));
 }
 
-#segment-audits {
-    color: var(--audits-theme);
-    transform-origin: var(--origin);
-    transform: rotate(-144deg) translate(var(--x-axis-trans), var(--y-axis-trans));
+.segment-audits {
+    color: rgba(var(--audits-theme), 0.6);
+    transform: var(--audits-segment-rotation) var(--section-dir-translate);
     transition: all 0.5s ease-in-out;
 }
-#segment-audits:has(path:hover),
-#segment-audits:has(.icon:hover) {
-    transform: rotate(-144deg) translate(var(--x-axis-trans), var(--y-axis-hover));
+.segment-audits:hover,
+.segment-audits[data-hovered=true] {
+    transform: var(--audits-segment-rotation) var(--section-dir-hover);
+    color: rgba(var(--audits-theme), 1);
+    -webkit-filter: drop-shadow( 0px 0px 20px rgba(var(--audits-theme), .5));
+    filter: drop-shadow( 0px 0px 20px rgba(var(--audits-theme), .5));
 }
 
-#segment-hvac {
-    color: var(--hvac-theme);
-    transform-origin: var(--origin);
-    transform: rotate(-72deg) translate(var(--x-axis-trans), var(--y-axis-trans));
+.segment-hvac {
+    color: rgba(var(--hvac-theme), 0.6);
+    transform: var(--hvac-segment-rotation) var(--section-dir-translate);
     transition: all 0.5s ease-in-out;
 }
-#segment-hvac:has(path:hover),
-#segment-hvac:has(.icon:hover) {
-    transform: rotate(-72deg) translate(var(--x-axis-trans), var(--y-axis-hover));
+.segment-hvac:hover,
+.segment-hvac[data-hovered=true] {
+    transform: var(--hvac-segment-rotation) var(--section-dir-hover);
+    color: rgba(var(--hvac-theme), 1);
+    stroke: rgb(var(--hvac-theme)) 5px;
+    -webkit-filter: drop-shadow( 0px 0px 20px rgba(var(--hvac-theme), .5));
+    filter: drop-shadow( 0px 0px 20px rgba(var(--hvac-theme), .5));
 }
 
-#segment-decarb {
-    color: var(--decarb-theme);
-    transform-origin: var(--origin);
-    transform: translate(var(--x-axis-trans), var(--y-axis-trans));
+.segment-decarb {
+    color: rgba(var(--decarb-theme), 0.6);
+    transform: var(--section-dir-translate);
     transition: all 0.5s ease-in-out;
 }
-#segment-decarb:has(path:hover),
-#segment-decarb:has(.icon:hover) {
-    transform: translate(var(--x-axis-trans), var(--y-axis-hover));
+.segment-decarb:hover,
+.segment-decarb[data-hovered=true] {
+    transform: var(--section-dir-hover);
+    color: rgba(var(--decarb-theme), 1);
+    -webkit-filter: drop-shadow( 0px 0px 20px rgba(var(--decarb-theme), .5));
+    filter: drop-shadow( 0px 0px 20px rgba(var(--decarb-theme), .5));
 }
 
-#segment-finance {
-    color: var(--finance-theme);
-    transform-origin: var(--origin);
-    transform: rotate(72deg) translate(var(--x-axis-trans), var(--y-axis-trans));
+.segment-finance {
+    color: rgba(var(--finance-theme), 0.6);
+    transform: var(--finance-segment-rotation) var(--section-dir-translate);
     transition: all 0.5s ease-in-out;
 }
-#segment-finance:has(path:hover),
-#segment-finance:has(.icon:hover) {
-    transform: rotate(72deg) translate(var(--x-axis-trans), var(--y-axis-hover));
+.segment-finance:hover,
+.segment-finance[data-hovered=true] {
+    transform: var(--finance-segment-rotation) var(--section-dir-hover);
+    color: rgba(var(--finance-theme), 1);
+    -webkit-filter: drop-shadow( 0px 0px 20px rgba(var(--finance-theme), .5));
+    filter: drop-shadow( 0px 0px 20px rgba(var(--finance-theme), .5));
 }
 
 
@@ -114,5 +181,60 @@ path {
     }
     100% {
         transform: rotate(359deg);
+    }
+}
+
+
+.hover-card-container {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    bottom: 8%;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.card {
+    margin: auto;
+    font-weight: 900;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2em;
+    width: 20em;
+    height: 10em;
+    transition: all 0.5s ease-in-out;
+}
+
+.lighting-card {
+    background: var(--lighting-background);
+    border: var(--lighting-border);
+}
+.audits-card {
+    border: var(--audits-border);
+}
+.hvac-card {
+    border: var(--hvac-border);
+}
+.decarb-card {
+    background: var(--decard-background);
+    border: var(--decard-border);
+}
+.finance-card {
+    border: var(--finance-border);
+}
+
+@keyframes appear {
+    0% {
+        visibility: hidden;
+    }
+    1% {
+        visibility: visible;
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
     }
 }
