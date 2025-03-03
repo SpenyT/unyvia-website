@@ -30,31 +30,7 @@
 
     --theme: white;
 
-    --origin: center center;
-    --x-axis-trans: 5%;
-    --y-axis-trans: 55%;
-    --y-axis-hover: calc(var(--y-axis-trans) + 10%);
-
-    --section-dir-translate: translate(var(--x-axis-trans), var(--y-axis-trans));
-    --section-dir-hover: translate(var(--x-axis-trans), var(--y-axis-hover));
-
-    --lighting-segment-rotation: rotate(144deg);
-    --audits-segment-rotation: rotate(-144deg);
-    --hvac-segment-rotation: rotate(-72deg);
-    --finance-segment-rotation: rotate(72deg);
-    /* --decarb-segment-rotation: rotate(0deg); */
-
-    --lighting-border: solid 3px var(--lighting-theme);
-    --audits-border: solid 3px var(--audits-theme);
-    --hvac-border: solid 3px var(--hvac-theme);
-    --finance-border: solid 3px var(--finance-theme);
-    --decard-border: solid 3px var(--decarb-theme);
-
-    --lighting-background: linear-gradient(to bottom left, rgba(139, 61, 255 0.5), rgba(139, 61, 255 0.3) rgba(139, 61, 255 0.5));
-    --audits-background: ;
-    --hvac-background: ;
-    --finance-background: ;
-    --decard-background: radial-gradient(rgb(139, 61, 255 0.5), rgb(139, 61, 255 0.3));
+ 
 
     --footer-background: linear-gradient(to bottom right, var(--unyvia_navy), var(--unyvia_navy2))
 }
@@ -82,8 +58,9 @@
 body {
     margin: 0;
     min-block-size: 100vh;
+    /* overflow: hidden; */
 
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-image: var(--unyvia_navy_gradient);
 
     line-height: inherit;

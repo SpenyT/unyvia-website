@@ -6,6 +6,7 @@ import '../../styles/componentStyles/section-dir.css';
 
 import Segment from '../../assets/spinning-segment.svg?react'
 import LightingIcon from '../../assets/lighting-icon.svg?react'
+import {ReactComponent as Icon} from'../../assets/spinning-segment.svg'
 
 interface ISegment {
     name: string,
@@ -49,8 +50,8 @@ const FullSegment = React.memo(({ name, icon:Icon, SetMouseHover}: FullSegmentPr
             onClick= {() => handleScrollToSection(name)}
             onMouseEnter={() => SetMouseHover(name)}
             onMouseLeave={() => SetMouseHover(null)}>
-                <Segment />
-                <Icon className="icon"/>
+                <Segment className="icon-svg" viewBox="0 0 120 183" />
+                <Icon className="icon" viewBox ="0 0 120 120"  />
         </div>
     );
 });
@@ -58,7 +59,7 @@ const FullSegment = React.memo(({ name, icon:Icon, SetMouseHover}: FullSegmentPr
 const ReflectedSegment = React.memo(({ name, icon:Icon, isHovered:IsHovered } : ReflectedSegmentProps) => {
     return(
         <div className={`segment segment-${name} reflection`} data-hovered={IsHovered}>
-            <Segment />
+            <Segment className ="icon-svg"/>
             <Icon className="icon"/>
         </div>
     );
@@ -85,7 +86,7 @@ export default function SectonDir() {
             <div className="segment-container">
                 <div className="main-spin">
                     {segments.map((segment) => (
-                        <FullSegment key={`${segment.name}-segment`} name={segment.name} icon={segment.icon} SetMouseHover={SetMouseHover}/>
+                        <FullSegment  key={`${segment.name}-segment`} name={segment.name} icon={segment.icon} SetMouseHover={SetMouseHover}/>
                     ))}
                 </div>
             </div>
