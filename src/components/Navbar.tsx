@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import LogoName from './LogoName';
@@ -6,7 +6,7 @@ import DropDownSvg from "../assets/dropdown-arrow.svg?react";
 
 import '../styles/componentStyles/navbar.css';
 
-export default function Navbar() {
+function Navbar() {
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
     const [hamburgerClicked, setHamburgerClicked] = useState<boolean>(false);
 
@@ -67,3 +67,5 @@ export default function Navbar() {
         </header>
     );
 }
+
+export default React.memo(Navbar);

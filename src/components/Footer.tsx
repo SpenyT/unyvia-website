@@ -1,10 +1,11 @@
+import React from 'react';
 import LogoName from './LogoName';
 
 
 import '../styles/componentStyles/footer.css';
 
 
-export default function Footer() {
+function Footer() {
 
     return (
         <footer className="footer">
@@ -22,3 +23,5 @@ export default function Footer() {
         </footer>
     );
 }
+
+export default React.memo(Footer);

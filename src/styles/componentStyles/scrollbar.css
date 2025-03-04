@@ -11,25 +11,80 @@
 
 .scrollbar {
     display: flex;
+    width: 0.5vw;
+    background-color: rgba(50, 50, 50, 0.5);
+    flex-direction: column;
+    justify-content: right;
     height: 95vh;
-    gap: 5px;
+    gap: 1px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    padding: 1px;
 }
 
 .scrollbar-section {
-    
+    border-radius: 0.5vw 0 0 0.5vw;
+    width: 100%;
+    transition: all 0.25s ease-in-out;
 }
 
 
 .unfocus {
-    opacity: 0.5;
+    opacity: 0.3;
     right: 0;
 }
 
 .focused {
     opacity: 0.7;
-    right: 0.5vw;
+    width: 25px;
+    margin-right: 7px;
+}
+
+.focused .scrollbar-section {
+    border-radius: 0.5vw 0.5vw 0.5vw 0.5vw;
 }
 
 .current-section {
-    
+    width: 1.1vw;
+}
+
+.scroll-handle {
+    border-radius: inherit;
+    background: black;
+    touch-action: none;
+    margin: 1px 1px ;
+    height: calc(100%/100vh);
+}
+
+.scroll-handle {
+    margin: 1px 1px;
+    width: 100%;
+    position: fixed;
+}
+
+
+/* Add Color for segments */
+
+#scrollbar-hvac {
+    background-color: rgb(var(--hvac-theme));
+}
+#scrollbar-lighting {
+    background-color: rgb(var(--lighting-theme));
+}
+#scrollbar-audits {
+    background-color: rgb(var(--audits-theme));
+}
+#scrollbar-decarb {
+    background-color: rgb(var(--decarb-theme));
+}
+#scrollbar-finance {
+    background-color: rgb(var(--finance-theme));
+}
+
+
+
+@media (max-width: 768px) {
+
 }

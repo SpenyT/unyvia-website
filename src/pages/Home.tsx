@@ -1,4 +1,6 @@
-import React, { useEffect, Suspense } from 'react';
+import React from 'react';
+import { useExpectedPageComponentCount } from '../utils/hooks/usePageComponentRegistration.tsx';
+
 import '../styles/pageStyles/home.css';
 
 import Hero from '../components/home/Hero.tsx';
@@ -10,8 +12,6 @@ import DecarbSection from '../components/home/DecarbSection.tsx';
 import FinanceSection from '../components/home/FinanceSection.tsx';
 import NewsletterSection from '../components/home/NewsletterSection.tsx';
 
-import { useScrollDirection } from '../utils/hooks/useScrollDirection.tsx';
-
 // const LightingSection = React.lazy(() => import('../components/home/LightingSection.tsx'));
 // const AuditsSection = React.lazy(() => import('../components/home/AuditsSection.tsx'));
 // const HvacSection = React.lazy(() => import('../components/home/HvacSection.tsx'));
@@ -19,10 +19,22 @@ import { useScrollDirection } from '../utils/hooks/useScrollDirection.tsx';
 // const FinanceSection = React.lazy(() => import('../components/home/FinanceSection.tsx'));
 // const NewsletterSection = React.lazy(() => import('../components/home/NewsletterSection.tsx'));
 
+const InitChildren = () => {
+    const childrenComponents = [
+        <Hero key="heroSection"/>,
+        <SectionDir key="sectionDir"/>,
+        <LightingSection key="lightingSection"/>,
+        <AuditsSection key="auditsSection"/>,
+        <HvacSection key="hvacSection"/>,
+        <DecarbSection key="decarbSection"/>,
+        <FinanceSection key="financeSection"/>,
+        <NewsletterSection key="newsletterSection"/>
+    ];
+    useExpectedPageComponentCount(childrenComponents.length);
+    return childrenComponents;
+}
 
-export default function Home() {
-
-    const scrollDir = useScrollDirection()
+function Home() {
 
     // useEffect(() => {
     //     import('../components/home/SectionDir.tsx');
@@ -34,16 +46,13 @@ export default function Home() {
     //     import('../components/home/NewsletterSection.tsx');
     // }, []);
 
+    
+
     return (
         <div className="home">
-            <Hero/>
-            <SectionDir />
-            <LightingSection />
-            <AuditsSection />
-            <HvacSection />
-            <DecarbSection />
-            <FinanceSection />
-            <NewsletterSection />
+            {InitChildren()}
         </div>
     );
 }
+
+export default React.memo(Home);

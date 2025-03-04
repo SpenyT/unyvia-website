@@ -21,6 +21,25 @@
     );
 
     --spin-size: 40em;
+    --origin: center center;
+    --x-axis-trans: 5%;
+    --y-axis-trans: 55%;
+    --y-axis-hover: calc(var(--y-axis-trans) + 10%);
+
+    --section-dir-translate: translate(var(--x-axis-trans), var(--y-axis-trans));
+    --section-dir-hover: translate(var(--x-axis-trans), var(--y-axis-hover));
+
+    --lighting-segment-rotation: 144deg;
+    --audits-segment-rotation: -144deg;
+    --hvac-segment-rotation: -72deg;
+    --finance-segment-rotation: 72deg;
+    /* --decarb-segment-rotation: rotate(0deg); */
+
+    --lighting-background: linear-gradient(to bottom left, rgba(139, 61, 255 0.5), rgba(139, 61, 255 0.3) rgba(139, 61, 255 0.5));
+    --audits-background: ;
+    --hvac-background: ;
+    --finance-background: ;
+    --decard-background: radial-gradient(rgb(139, 61, 255 0.5), rgb(139, 61, 255 0.3));
 }
 
 .segment-container {
@@ -65,7 +84,7 @@
     position: absolute;
     top: calc((100vh - var(--spin-size)) / 2);
     left: calc((100vw - var(--spin-size)) / 2);
-    animation: rotation 30s infinite linear;
+    animation: rotation 50s infinite linear;
     will-change: transform;
     pointer-events: none;
 }
@@ -81,7 +100,7 @@
     position: absolute;
     top: 5em;
     left: calc((100vw - var(--spin-size)) / 2);
-    animation: rotation 30s infinite linear;
+    animation: rotation 50s infinite linear;
     will-change: transform;
     pointer-events: none;
 }
@@ -101,22 +120,43 @@ path:not(.reflection path) {
 }
 
 .icon {
-    height: 50%;
-    width: 75%;
+    position: relative;
     cursor: pointer;
-    animation: rotation 30s infinite linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotation 50s infinite linear;
     animation-direction: reverse;
     will-change: transform;
 }
 
+.section-icon {
+    position: absolute;
+}
+.segment-lighting .section-icon{
+    transform: rotate(calc(var(--lighting-segment-rotation)*-1));
+}
+.segment-audits .section-icon{
+    transform: rotate(calc(var(--audits-segment-rotation)*-1));
+}
+.segment-hvac .section-icon{
+    transform: rotate(calc(var(--hvac-segment-rotation)*-1));
+}
+.segment-decarb .section-icon{
+    transform: rotate(calc(var(--decarb-segment-rotation)*-1));
+}
+.segment-finance .section-icon{
+    transform: rotate(calc(var(--finance-segment-rotation)*-1));
+}
+
 .segment-lighting {
     color: rgba(var(--lighting-theme), 0.6);
-    transform: var(--lighting-segment-rotation) var(--section-dir-translate);
+    transform: rotate(var(--lighting-segment-rotation)) var(--section-dir-translate);
     transition: all 0.5s ease-in-out;
 }
 .segment-lighting:hover,
 .segment-lighting[data-hovered=true] {
-    transform: var(--lighting-segment-rotation) var(--section-dir-hover);
+    transform: rotate(var(--lighting-segment-rotation)) var(--section-dir-hover);
     color: rgba(var(--lighting-theme), 1);
     -webkit-filter: drop-shadow( 0px 0px 20px rgba(var(--lighting-theme), .5));
     filter: drop-shadow( 0px 0px 20px rgba(var(--lighting-theme), .5));
@@ -124,12 +164,12 @@ path:not(.reflection path) {
 
 .segment-audits {
     color: rgba(var(--audits-theme), 0.6);
-    transform: var(--audits-segment-rotation) var(--section-dir-translate);
+    transform: rotate(var(--audits-segment-rotation)) var(--section-dir-translate);
     transition: all 0.5s ease-in-out;
 }
 .segment-audits:hover,
 .segment-audits[data-hovered=true] {
-    transform: var(--audits-segment-rotation) var(--section-dir-hover);
+    transform: rotate(var(--audits-segment-rotation)) var(--section-dir-hover);
     color: rgba(var(--audits-theme), 1);
     -webkit-filter: drop-shadow( 0px 0px 20px rgba(var(--audits-theme), .5));
     filter: drop-shadow( 0px 0px 20px rgba(var(--audits-theme), .5));
@@ -137,12 +177,12 @@ path:not(.reflection path) {
 
 .segment-hvac {
     color: rgba(var(--hvac-theme), 0.6);
-    transform: var(--hvac-segment-rotation) var(--section-dir-translate);
+    transform: rotate(var(--hvac-segment-rotation)) var(--section-dir-translate);
     transition: all 0.5s ease-in-out;
 }
 .segment-hvac:hover,
 .segment-hvac[data-hovered=true] {
-    transform: var(--hvac-segment-rotation) var(--section-dir-hover);
+    transform: rotate(var(--hvac-segment-rotation)) var(--section-dir-hover);
     color: rgba(var(--hvac-theme), 1);
     stroke: rgb(var(--hvac-theme)) 5px;
     -webkit-filter: drop-shadow( 0px 0px 20px rgba(var(--hvac-theme), .5));
@@ -163,13 +203,13 @@ path:not(.reflection path) {
 }
 
 .segment-finance {
+    transform: rotate(var(--finance-segment-rotation)) var(--section-dir-translate);
     color: rgba(var(--finance-theme), 0.6);
-    transform: var(--finance-segment-rotation) var(--section-dir-translate);
     transition: all 0.5s ease-in-out;
 }
 .segment-finance:hover,
 .segment-finance[data-hovered=true] {
-    transform: var(--finance-segment-rotation) var(--section-dir-hover);
+    transform: rotate(var(--finance-segment-rotation)) var(--section-dir-hover);
     color: rgba(var(--finance-theme), 1);
     -webkit-filter: drop-shadow( 0px 0px 20px rgba(var(--finance-theme), .5));
     filter: drop-shadow( 0px 0px 20px rgba(var(--finance-theme), .5));
@@ -196,7 +236,7 @@ path:not(.reflection path) {
     z-index: 2;
 }
 
-.card {
+.card i{
     margin: auto;
     font-weight: 900;
     color: white;
