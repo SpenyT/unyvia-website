@@ -55,18 +55,13 @@
     background: black;
     touch-action: none;
     margin: 1px 1px ;
-    height: calc(100%/100vh);
-}
-
-.scroll-handle {
-    margin: 1px 1px;
-    width: 100%;
-    position: fixed;
 }
 
 
 /* Add Color for segments */
+#section-dir {
 
+}
 #scrollbar-hvac {
     background-color: rgb(var(--hvac-theme));
 }

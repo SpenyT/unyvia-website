@@ -1,36 +1,12 @@
-import '../styles/componentStyles/scrollbar.css';
 import React, { useState, useEffect, useRef } from 'react';
-import {motion} from 'motion/react';
 
-import { usePageLoadContext } from '../utils/contexts/PageLoadContext.tsx';
-import {handleScrollToSection} from "../utils/scrollLogic.ts";
+import { PageComponentItem, usePageLoadContext } from '../utils/contexts/PageLoadContext.tsx';
+import ScrollHandle from './subComponents/ScrollHandle.tsx';
+import ScrollbarSection from './subComponents/ScrollbarSections.tsx'
 
-const handleScrollbarSectionSize = (sectionId: string) => {
-    const GAPSIZE = 1;
+import '../styles/componentStyles/scrollbar.css';
 
-    const body = document.body;
-    const html = document.documentElement;
-    const documentHeight = Math.max( body.scrollHeight, body.offsetHeight, 
-                            html.clientHeight, html.scrollHeight, html.offsetHeight );
 
-    const SCROLLBAR_HEIGHT = documentHeight * 0.95;
-    
-    let sectionHeight = document.getElementById(sectionId)?.scrollHeight;
-    if(!sectionHeight || sectionHeight === 0)
-        throw new Error("Section DNE");
-    
-    sectionHeight -= GAPSIZE;
-    return Math.round((sectionHeight/documentHeight) * SCROLLBAR_HEIGHT);
-}
-
-const getScrollThumbHeight = () => {
-    const body = document.body;
-    const html = document.documentElement;
-    const documentHeight = Math.max( body.scrollHeight, body.offsetHeight, 
-                            html.clientHeight, html.scrollHeight, html.offsetHeight );
-    const scrollbarThumbHeight =  (window.innerHeight*window.innerHeight*0.95/documentHeight);
-    return scrollbarThumbHeight;
-};
 
 interface ScrollSection {
     id: string,
@@ -38,68 +14,38 @@ interface ScrollSection {
     info: string
 }
 
-type scrollbarSectionProps = {
-    sectionInfo: ScrollSection,
-    isBarHovered: boolean
-}
-
-const scrollSections: ScrollSection[] = [{id:"hero", label:"Hero Section", info:"Hero Section"},
-                                        {id:"sectionDir", label:"Section Directory", info:"Section Directory"},
-                                        {id:"lighting", label:"Hvac Section", info:"Hvac Section"},
-                                        {id:"audits", label:"Hvac Section", info:"Hvac Section"},
-                                        {id:"hvac", label:"Hvac Section", info:"Hvac Section"},
-                                        {id:"decarb", label:"Hvac Section", info:"Hvac Section"},
-                                        {id:"finance", label:"Hvac Section", info:"Hvac Section"}];
-
-const ScrollBarSection = React.memo(({sectionInfo, isBarHovered}: scrollbarSectionProps) => {
-
-
-    return(
-        <motion.div id={`scrollbar-${sectionInfo.id}`} className={`scrollbar-section ${isBarHovered ? "current-section" : ""}`} style={{height: `${handleScrollbarSectionSize(sectionInfo.id)}px`}}
-            onClick={() => handleScrollToSection(sectionInfo.id)}> {/*Could use some optimization*/}
-        </motion.div>
-    );
-});
-
-function ScrollBar() {
+export default function Scrollbar() {
     const { pageComponents, expectedComponentCount } = usePageLoadContext();
-    const [isHovered, setIsHovered] = useState<boolean>(false);
-    const constraintsRef = useRef<HTMLDivElement | null>(null)
-
+    const [documentHeight, setDocumentHeight] = useState<number>(0);
     const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
+    const scrollbarRef = useRef<HTMLDivElement | null>(null);
+
+
     useEffect(() => {
-        const allReady =
-            pageComponents.length >= expectedComponentCount &&
-            pageComponents.every(comp => comp.isReady);
-          setIsLoaded(allReady);
-      }, [pageComponents, expectedComponentCount]);
+        const body = document.body,
+              html = document.documentElement;
+        const documentHeightCalc = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, 
+                                        html.scrollHeight,  html.offsetHeight );
+        setDocumentHeight(documentHeightCalc);
 
-    //event:MouseEvent, info:PanInfo
-    function onDrag() {
-        
-    }
+        const allReady = pageComponents.length >= expectedComponentCount
+                            && pageComponents.every(comp => comp.isReady);
+        setIsLoaded(allReady);
+    }, [pageComponents, expectedComponentCount, documentHeight]);
 
-    //onscroll scrollthumb position
-    useEffect(() => {
-
-    }, []);
 
     return (
-        <div id="scrollbar-container" className="scrollbar-container"
-            onMouseEnter={() => setIsHovered(true)} 
-            onMouseLeave={() => setIsHovered(false)}>
+        <div id="scrollbar-container" className="scrollbar-container">
 
-            {isLoaded && <div id="scrollbar" className={`scrollbar ${isHovered ? "focused" : "unfocus"}`} ref={constraintsRef}>
-                <motion.div className="scroll-handle" drag="y" dragConstraints={constraintsRef} style={{height:getScrollThumbHeight()}}
-                    onDrag={onDrag}>
-                </motion.div>
-                {scrollSections.map((section, idx) => (
-                    <ScrollBarSection key={`scrollbar-section-${idx}`} sectionInfo={section} isBarHovered={isHovered}/>
-                ))}
-            </div>}
+            {isLoaded && 
+                <div id="scrollbar" className="scrollbar" ref={scrollbarRef}>
+                    <ScrollHandle documentHeight={documentHeight} scrollbarRef={scrollbarRef as React.RefObject<HTMLDivElement>}/>
+                    {pageComponents.map((section, idx) => (
+                        <ScrollbarSection key={`scrollbar-section-${idx}`} sectionInfo={section}/>
+                    ))}
+                </div>
+            }
         </div>
     );
 }
-
-export default React.memo(ScrollBar);
