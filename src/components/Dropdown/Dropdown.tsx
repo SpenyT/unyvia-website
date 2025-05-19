@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
-import DropdownButton from "../DropdownButton/DropdownButton";
-import DropdownContent from "../DropdownContent/DropdownContent";
+import DropdownButton from "./DropdownButton.tsx";
+// import DropdownContent from "./DropdownContent.tsx";
 
 interface DropdownProps {
   
@@ -11,10 +11,10 @@ const Dropdown: React.FC<DropdownProps> = ({content}) => {
   return (
     <div>
         <DropdownButton>
-            <DropdownContent content ={content}>
+            {/* <DropdownContent content ={content}>
 
                 
-            </DropdownContent>
+            </DropdownContent> */}
         </DropdownButton>
      
      

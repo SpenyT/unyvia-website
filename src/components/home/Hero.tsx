@@ -1,10 +1,2 @@
-import '../../styles/componentStyles/hero.css';
+import React from 'react';
 
-export default function Hero() {
-    return (
-        <section id="hero">
-            <div className="hero">
-            </div>
-        </section>
-    );
-}
