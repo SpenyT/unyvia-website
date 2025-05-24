@@ -7,7 +7,10 @@
     margin-top: 5em;
     
 }
-
+.service-intro h2{
+    font-size: 2.2rem;
+    text-align: center;
+}
 
 .divider{
     width: 100%;
@@ -30,12 +33,12 @@
     width: 20rem;
    
     
-    padding: 0.6em;
+    padding: 0.5em;
     display: flex;
     flex-direction: column;
     background-color:var(--unyvia_navy) ;
     border: 1.5px solid var(--unyvia_navy3);
-    justify-content: space-between;
+    justify-content: space-around;
 
     border-radius: 8px;
     transition: all 0.4s ease;
@@ -44,15 +47,15 @@
    
 }
 
-.service-menu-card-title{
-    min-height: 3.5rem;
+.service-menu-card-title h4{
+
+margin: 0;
 
 }
 
 .service-menu-card-subtitle{
-     min-height: 2rem; /* enough space for 1 line of subtitle text */
-  display: flex;
-  align-items: center;
+    margin-top: 0
+
 
 }
 .service-menu-card .service-menu-card-body{

@@ -18,9 +18,9 @@ export default function Services() {
         <>
             <div className="service-content">
                 <div className="service-intro">
-                    <h3>
+                    <h2>
                     Bring your savings to the next level or some other text
-                    </h3>
+                    </h2>
                 </div>
                 <div className="divider"></div>
                 <div className="service-menu">
