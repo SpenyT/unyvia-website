@@ -42,7 +42,7 @@ export default function Services() {
                             </div>
                         </div>
                         <div className="service-menu-card-cta">
-                            Learn More 
+                            Learn More <span className="arrow">→</span>
                         </div>
                    </div>
                          
@@ -65,7 +65,7 @@ export default function Services() {
                             </div>
                         </div>
                         <div className="service-menu-card-cta">
-                            Learn More 
+                            Learn More <span className="arrow">→</span>
                         </div>
                     </div>
                     <div className="service-menu-card">
@@ -88,7 +88,7 @@ export default function Services() {
                             </div>
                         </div>
                         <div className="service-menu-card-cta">
-                            Learn More 
+                            Learn More <span className="arrow">→</span>
                         </div>
                     </div>
                     <div className="service-menu-card">
@@ -111,7 +111,7 @@ export default function Services() {
                             </div>
                         </div>
                         <div className="service-menu-card-cta">
-                            Learn More 
+                            Learn More <span className="arrow">→</span>
                         </div>
                     </div>
                     <div className="service-menu-card">
@@ -135,7 +135,7 @@ export default function Services() {
                             </div>
                         </div>
                         <div className="service-menu-card-cta">
-                            Learn More 
+                            Learn More <span className="arrow">→</span>
                         </div>
                     </div>
                     <div className="service-menu-card">
@@ -159,7 +159,7 @@ export default function Services() {
                             </div>
                         </div>
                         <div className="service-menu-card-cta">
-                            Learn More 
+                            Learn More <span className="arrow">→</span>
                         </div>
                     </div>
                     
