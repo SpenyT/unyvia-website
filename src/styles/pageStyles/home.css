@@ -1,12 +1,7 @@
 .home {
     width: 100%;
-    scroll-behavior: smooth;
-}
-
-
-.content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%
+    align-items: center;
 }
