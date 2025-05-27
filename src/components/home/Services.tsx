@@ -9,6 +9,7 @@ import DecarbonLogo from '../../assets/decarbon.svg?react'
 import EnergyAsaService from '../../assets/eas.svg?react'
 import SolarLogo from '../../assets/solar.svg?react'
 // import Hero from '../components/home/Hero.tsx';
+import ServiceMenuCard from './ServiceCard';
 
 
 
@@ -24,7 +25,7 @@ export default function Services() {
                 </div>
                 <div className="divider"></div>
                 <div className="service-menu">
-                    <div className="service-menu-card">
+                    <ServiceMenuCard>
                         <div className="service-menu-card-title"><h4>Energy Audits & Subsidies</h4></div>
                         <div className="service-menu-card-subtitle">Optimize. Save. Sustain. </div>
                         <div className="service-menu-card-body">
@@ -44,9 +45,10 @@ export default function Services() {
                         <div className="service-menu-card-cta">
                             Learn More <span className="arrow">→</span>
                         </div>
-                   </div>
-                         
-                    <div className="service-menu-card">
+                   
+                   </ServiceMenuCard>
+                    <ServiceMenuCard>
+                   
                         <div className="service-menu-card-title"><h4>HVAC System Optimization </h4></div>
                         <div className="service-menu-card-subtitle">Breathe easier. Spend smarter. </div>
                         <div className="service-menu-card-body">
@@ -67,8 +69,9 @@ export default function Services() {
                         <div className="service-menu-card-cta">
                             Learn More <span className="arrow">→</span>
                         </div>
-                    </div>
-                    <div className="service-menu-card">
+                    </ServiceMenuCard>
+                    <ServiceMenuCard>
+                   
                          <div className="service-menu-card-title"><h4>LED Lighting Solutions</h4></div>
                         <div className="service-menu-card-subtitle">Light smarter. Shine brighter.</div>
                         <div className="service-menu-card-body">
@@ -90,8 +93,8 @@ export default function Services() {
                         <div className="service-menu-card-cta">
                             Learn More <span className="arrow">→</span>
                         </div>
-                    </div>
-                    <div className="service-menu-card">
+                    </ServiceMenuCard>
+                    <ServiceMenuCard>
                         <div className="service-menu-card-title"><h4>Decarbonization Services </h4></div>
                         <div className="service-menu-card-subtitle">Your path to net zero starts here. </div>
                         <div className="service-menu-card-body">
@@ -113,8 +116,8 @@ export default function Services() {
                         <div className="service-menu-card-cta">
                             Learn More <span className="arrow">→</span>
                         </div>
-                    </div>
-                    <div className="service-menu-card">
+                    </ServiceMenuCard>
+                    <ServiceMenuCard>
                          <div className="service-menu-card-title"><h4>Energy-as-a-Service (EaaS) Financing </h4></div>
                         <div className="service-menu-card-subtitle">No CAPEX. No debt. No delays. </div>
                         <div className="service-menu-card-body">
@@ -137,8 +140,8 @@ export default function Services() {
                         <div className="service-menu-card-cta">
                             Learn More <span className="arrow">→</span>
                         </div>
-                    </div>
-                    <div className="service-menu-card">
+                    </ServiceMenuCard>
+                    <ServiceMenuCard>
                          <div className="service-menu-card-title"><h4>Solar Panels & Energy Storage Solutions</h4></div>
                         <div className="service-menu-card-subtitle">Power your future—naturally.</div>
                         <div className="service-menu-card-body">
@@ -161,7 +164,7 @@ export default function Services() {
                         <div className="service-menu-card-cta">
                             Learn More <span className="arrow">→</span>
                         </div>
-                    </div>
+                    </ServiceMenuCard>
                     
 
                 </div>

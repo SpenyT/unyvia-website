@@ -124,7 +124,7 @@
      display: flex;
   align-items: center;
   justify-content: center;
-  filter: brightness(0.9); 
+  filter: brightness(1); 
   transition: filter 0.4s ease;
 }
 
@@ -201,3 +201,38 @@ padding-left: 0.5rem;
 .service-menu-card:hover .service-menu-card-cta .arrow {
   transform: translateX(8px);
 }
+
+
+
+@media screen and (max-width: 768px) {
+
+  .service-intro h2{
+    font-size: 1.3rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+  .service-menu-card.in-view {
+  
+
+    transform: translateY(-3%);
+    background-color: aliceblue;
+    color: black;
+    transition: all 0.6s ease;
+    /* border: 2px solid var(--unyvia_navy); */   
+} 
+   
+    .service-menu-card.in-view .service-menu-card-body .service-info{
+      transform: translateX(0%);
+      opacity: 1;
+      transition: all 1s ease;
+}
+    .service-menu-card.in-view .service-menu-card-body .service-icon{
+      transform: translateX(-100%);
+    opacity: 0;
+     transition: transform 1s ease, opacity 0.5s ease;
+}
+}
+
+
+
