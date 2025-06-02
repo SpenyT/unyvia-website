@@ -1,0 +1,240 @@
+.service-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin-top: 5em;
+    min-height: 100vh;
+    
+}
+.service-intro h2{
+    font-size: 2.2rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.divider{
+    width: 100%;
+    height:2px;
+    background-color:lightgray;
+    border-radius: 25px;
+}
+
+
+.service-menu-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--unyvia_navy);
+  transform: scaleX(0);
+  transition: transform 0.6s ease;
+}
+
+.service-menu-card:hover::before {
+  transform: scaleX(1);
+} 
+.service-menu{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap:1.5em;
+    padding:2em 
+
+}
+
+.service-menu-card{
+    font-family: 'Inter','Roboto',Arial, sans-serif;
+    width: 20rem;
+   
+    min-height: 320px;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    background-color:var(--unyvia_navy) ;
+    border: 1.5px solid var(--unyvia_navy3);
+    justify-content: space-between;
+
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+
+   
+}
+
+.service-menu-card-title h4{
+
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    margin: 0 0 0.25em 0;
+    text-transform: capitalize
+    
+
+}
+
+.service-menu-card-subtitle{
+    
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    min-height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-transform: capitalize;
+}
+
+
+
+.service-menu-card .service-menu-card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    
+}
+
+.service-menu-card .service-menu-card-body .service-icon{
+
+    position: absolute;
+    color: transparent;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
+    transform: translateX(0);
+    opacity: 1;
+    
+    
+}
+.service-menu-card .service-menu-card-body .service-info{
+    transform: translateX(100%);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    opacity: 0;
+    
+}
+
+
+.logo-icon{
+    padding-top: 1rem;
+    width:15rem;
+     display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: brightness(1); 
+  transition: filter 0.4s ease;
+}
+
+
+.service-menu-card:hover{
+
+    transform: translateY(-3%);
+    background-color: aliceblue;
+    color: black;
+    transition: all 0.4s ease;
+    /* border: 2px solid var(--unyvia_navy); */
+    
+}
+
+.service-menu-card:hover  .service-menu-card-body .service-info{
+      transform: translateX(0%);
+      opacity: 1;
+}
+.service-menu-card:hover  .service-menu-card-body .service-icon{
+    transform: translateX(-100%);
+    opacity: 0;
+    
+}
+.service-info ul {
+  list-style: none;
+padding-left: 0.5rem;
+  color: #1e293b;
+}
+
+
+.service-info li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.0;
+  font-size: 0.95rem;
+}
+
+.service-info li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.service-menu-card-cta {
+    margin-top: 1em;
+
+ 
+    font-weight: 600;
+   
+    cursor: pointer;
+    transition: color 0.2s ease;
+    font-size: 1.08rem;
+    letter-spacing: 0.01em;
+    position: relative;
+    border-top: 1px solid grey;
+    padding:0.75em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.service-menu-card-cta .arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+    font-size: 1.2em;
+    
+}
+
+.service-menu-card:hover .service-menu-card-cta .arrow {
+  transform: translateX(8px);
+}
+
+
+
+@media screen and (max-width: 1100px) {
+
+  .service-intro h2{
+    font-size: 1.3rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+  .service-menu-card.in-view {
+  
+
+    transform: translateY(-3%);
+    background-color: aliceblue;
+    color: black;
+    transition: all 0.6s ease;
+    /* border: 2px solid var(--unyvia_navy); */   
+} 
+   
+    .service-menu-card.in-view .service-menu-card-body .service-info{
+      transform: translateX(0%);
+      opacity: 1;
+      transition: all 1s ease;
+}
+    .service-menu-card.in-view .service-menu-card-body .service-icon{
+      transform: translateX(-100%);
+    opacity: 0;
+     transition: transform 1s ease, opacity 0.5s ease;
+}
+}
+
+
+
