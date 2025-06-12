@@ -19,6 +19,8 @@ const settings = {
 const testText = "Since partnering with [Your Company], our buildings have run more smoothly than ever. Maintenance issues are resolved quickly, communication is seamless, and tenant satisfaction is at an all-time high. They’ve taken the stress out of property management."
 const author = "Spencer Toupin"
 const role = "COO Of Lynosoft";
+
+
 return(
     <>
         <div className = "testimonials-container">

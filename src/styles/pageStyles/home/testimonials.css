@@ -162,19 +162,19 @@
   }
 
   .testimonial-author {
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin: 1rem 0 0.25rem 0;
   }
 
   .testimonial-authore-role {
     font-size: 0.95rem;
-    margin: 0.25rem 0 0 0;
+    margin: 1rem 0 0 0;
   }
 
   .testimonial-quote-left,
   .testimonial-quote-right {
     font-size: 1.5em;
-    margin: 0;
+    margin: 0 1rem;
   }
 
   .slick-prev{
