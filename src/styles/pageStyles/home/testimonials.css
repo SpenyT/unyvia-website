@@ -1,0 +1,186 @@
+.testimonials-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin-bottom: 3em;
+   
+    max-width: 1400px; 
+    
+    text-align: center;
+    
+}
+
+.testimonials-intro h2{
+    font-size: 2.2rem
+
+}
+
+.testimonial-divider{
+    margin-top: 1em;
+    width: 30%;
+    height:2px;
+    background-color:lightgray;
+    border-radius: 25px;
+}
+
+
+.testimonials-card-container{
+    width: 100%;
+   
+   margin-top: 3rem;
+}
+
+.testimonials-card-container h2{
+   
+}
+
+.testminonial-card{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    /* text-align: center; */
+    background-color:var(--unyvia_navy) ;
+    border: 1.5px solid var(--unyvia_navy3);
+    border-radius: 15px;
+
+    
+}
+
+.testimonial-author{
+    margin: 2rem 0rem 0.5rem 0rem;
+    font-size: 2rem;
+    /* font-weight: 600; */
+}
+
+.testimonial-authore-role{
+    margin: 2rem 0rem 0rem 0rem;
+    font-weight: 400;
+    font-size: 1.15rem;
+    
+}
+
+.testimonial-text-box{
+    position: relative;
+
+    display: flex; 
+    flex-direction: column;
+   
+    margin:0rem 0rem 5rem 0rem;
+    width: 80%;
+
+}
+
+.testimonial-text{
+   
+    margin: 0 2rem 0 2rem;
+    font-size: 1.3rem
+
+
+}
+
+.testimonial-quote-left{
+   
+    font-size: 2.4em;
+    align-self: start;
+    
+   
+}
+.testimonial-quote-right{
+    margin-right: 1.5rem;
+    font-size: 2.4em;
+    align-self: end;
+   
+}
+
+/* Remove all background, border, and shadow from arrows */
+.testimonials-container .slick-prev,
+.testimonials-container .slick-next {
+
+  transition: none;
+  padding: 0;
+}
+
+/* Style the arrow icons themselves */
+.testimonials-container .slick-prev:before,
+.testimonials-container .slick-next:before {
+  color: lightgray; /* Or any color you want */
+  font-size: 2rem;
+  opacity: 1;
+  font-family: 'slick';
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Optional: change color on hover */
+.testimonials-container .slick-prev:hover:before,
+.testimonials-container .slick-next:hover:before {
+  color: white;
+}
+
+.testimonials-container .slick-prev {
+  left: -3rem;
+}
+.testimonials-container .slick-next {
+  right: -2.2rem;
+}
+
+.testimonials-container .slick-dots li button:before{
+    font-size: 0.6rem;
+   
+}
+
+.testimonials-container .slick-dots li.slick-active button:before{
+    color: var( --unyvia_white);
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .testimonials-container {
+    width: 85%;
+    padding: 0 1vw;
+  }
+
+  .testminonial-card {
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .testimonial-text-box {
+    width: 100%;
+    margin: 1rem 0 2rem 0;
+  }
+
+  .testimonial-text {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+  }
+
+  .testimonial-author {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.25rem 0;
+  }
+
+  .testimonial-authore-role {
+    font-size: 0.95rem;
+    margin: 0.25rem 0 0 0;
+  }
+
+  .testimonial-quote-left,
+  .testimonial-quote-right {
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  .slick-prev{
+    opacity: 0
+  }
+  .slick-next{
+    opacity: 0;
+  }
+}
