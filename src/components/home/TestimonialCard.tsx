@@ -13,20 +13,20 @@ export default function TestimonialCard({text ="",author="",role="" }: Testimoni
     
     return (
         <div className="testminonial-card">
-            <div className="testimonial-author">{author}</div>
-            <div className="testimonial-authore-role">{role}</div>
-            <div className="testimonial-text-box">
-                <span className="testimonial-quote-left">
+            <div className="testimonial-quote">
                     <FontAwesomeIcon  icon={faQuoteLeft} /> 
-                </span>
+            </div>
+             <div className="testimonial-text-box">
+                
                 <div className="testimonial-text">
                      {text}
                </div>
                         
-                <span className="testimonial-quote-right">
-                    <FontAwesomeIcon icon={faQuoteRight} /> 
-                </span>
             </div>
+            
+            <div className="testimonial-author">{author}</div>
+            <div className="testimonial-authore-role">{role}</div>
+           
 
         </div>
     )

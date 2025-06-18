@@ -1,7 +1,7 @@
-import React from 'react';
+
 import '../../styles/pageStyles/home/home.css';
 import '../../styles/pageStyles/home/services.css'
-import LightingLogo from '../../assets/lighting-icon.svg?react'
+
 import EnergyAuditLogo from '../../assets/energy-audit.svg?react'
 import HVACLogo from '../../assets/hvac.svg?react'
 import LEDLogo from '../../assets/led.svg?react'
