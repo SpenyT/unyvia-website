@@ -41,9 +41,9 @@ export default function TestimonialsContinuous() {
           pagination={{ clickable: true }}
           spaceBetween={30}
           slidesPerView="auto"
-          centeredSlides={false}
+          centeredSlides={true}
         autoplay={{
-          delay: 1, 
+          delay: 0, 
           disableOnInteraction: false,
           pauseOnMouseEnter: false,
           reverseDirection: true,
@@ -52,11 +52,11 @@ export default function TestimonialsContinuous() {
           loop={true}
           grabCursor={true}
           allowTouchMove={true}
-          freeMode={true
+          freeMode={false
           }
           breakpoints={{
             640: {
-              slidesPerView: 1.2,
+              slidesPerView: 1,
               spaceBetween: 20,
             },
             768: {
