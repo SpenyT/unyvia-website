@@ -33,7 +33,7 @@
 .testimonials-card-container {
   width: 100%;
   margin-top: 3rem;
-  padding: 0 1rem;
+ 
 
 
 }
@@ -96,6 +96,11 @@
    
 }
 
+
+.testimonials-swiper-continuous .swiper-slide{
+
+ max-width: 500px ;
+}
 
 .testimonials-swiper-continuous .swiper-pagination {
   position: relative !important;
