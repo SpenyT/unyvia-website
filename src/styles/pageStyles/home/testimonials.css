@@ -44,8 +44,9 @@
     
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     max-width: 500px;
-
+    min-height: 333px;
     /* text-align: center; */
     background-color:var(--unyvia_navy) ;
     border: 1.5px solid var(--unyvia_navy3);
@@ -94,13 +95,6 @@
     
    
 }
-
-
-
-
-
-
-
 
 
 .testimonials-swiper-continuous .swiper-pagination {

@@ -22,11 +22,11 @@ export default function TestimonialCard({text ="",author="",role="" }: Testimoni
                      {text}
                </div>
                         
-            </div>
-            
-            <div className="testimonial-author">{author}</div>
-            <div className="testimonial-authore-role">{role}</div>
-           
+            </div> 
+            <div>
+                <div className="testimonial-author">{author}</div>
+                <div className="testimonial-authore-role">{role}</div>
+           </div>
 
         </div>
     )

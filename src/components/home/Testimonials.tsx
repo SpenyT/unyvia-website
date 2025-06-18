@@ -13,16 +13,19 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 
 export default function TestimonialsContinuous() {
-  const testText =
+ 
+     const testText =
     "\"Since partnering with [Your Company], our buildings have run more smoothly than ever. Maintenance issues are resolved quickly, communication is seamless, and tenant satisfaction is at an all-time high. They've taken the stress out of property management.\""
+     const testText2 =
+    "\"Since partnering with [Your Company]ess, and tenant satisfaction is at an all-time high. They've taken the stress out of property management.\""
   const author = "Spencer Toupin"
   const role = "COO Of Lynosoft"
 
   const testimonials = [
     { text: testText, author: author, role: role },
     { text: testText, author: "Jane Smith", role: "CEO of TechCorp" },
-    { text: testText, author: "Mike Johnson", role: "Property Manager" },
-    { text: testText, author: "Sarah Wilson", role: "Real Estate Director" },
+    { text: testText2, author: "Mike Johnson", role: "Property Manager" },
+    { text: testText2, author: "Sarah Wilson", role: "Real Estate Director" },
     { text: testText, author: "David Brown", role: "Operations Manager" },
   ]
 
