@@ -1,7 +1,7 @@
-import React from 'react';
+
 import '../../styles/pageStyles/home/home.css';
 import '../../styles/pageStyles/home/services.css'
-import LightingLogo from '../../assets/lighting-icon.svg?react'
+
 import EnergyAuditLogo from '../../assets/energy-audit.svg?react'
 import HVACLogo from '../../assets/hvac.svg?react'
 import LEDLogo from '../../assets/led.svg?react'
@@ -20,7 +20,7 @@ export default function Services() {
             <div className="service-content">
                 <div className="service-intro">
                     <h2>
-                    Bring your savings to the next level or some other text
+                    Bring your savings to the next level
                     </h2>
                 </div>
                 <div className="divider"></div>
