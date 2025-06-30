@@ -5,7 +5,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    width: 100vw;
+    width: 75vw;
    
   
 }
@@ -16,6 +16,7 @@
     border: 1.5px solid var(--unyvia_navy3);
     padding:3rem 6rem;
     width:80%;
+    max-width: 200rem;
     border-radius: 15px;
 }
 
@@ -56,7 +57,7 @@
 
 .cta-metric h2{
    
-
+    font-size: 2rem;
     margin: 0;
 }
 
@@ -159,9 +160,27 @@ p.metric-text{
     margin: 0 2rem 0 2rem;
 }
 
+.cta-button button{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2em 1.2em;
+    color: white;
+    border-radius: 5px;
+    background: linear-gradient(15deg, var(--unyvia_green), var(--unyvia_lightgreen), var(--unyvia_green)) no-repeat;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+    background-size: 300%;
+    background-position: left center;
+    transition: all 0.2s ease-in-out;
+}
+
 
 @media screen and (max-width: 1024px) {
-    .cta-container {
+    /* .cta-container {
         margin: 1rem 2rem 2rem 2rem;
     }
     
@@ -176,7 +195,7 @@ p.metric-text{
     
     .vertical_divider {
         margin: 0 1rem 0 1rem;
-    }
+    } */
 }
 
 /* Mobile landscape and small tablets */
