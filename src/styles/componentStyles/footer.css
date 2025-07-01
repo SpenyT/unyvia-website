@@ -1,16 +1,30 @@
 .footer {
     width: 100%;
-    background: var(--footer-background);
+    background: var(--unyvia_navy);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+
     align-items: center;
+    gap: 10rem;
+    overflow: hidden;
+ 
 }
 
-.footer-content {
+ .footer-content {
+    
+    display: flex;
+    align-self:flex-start;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 
-}
+    width: auto;
+    padding: 2rem 0 1rem 0;
+   
 
+} 
 
 
 .footer-footer {
@@ -21,3 +35,21 @@
 .socials-container {
     
 }
+
+li{
+    list-style: none;
+   
+}
+
+.footer-item{
+    margin: 0 2rem 0 2rem;
+    width:10rem;
+}
+.footer-item-title{
+    font-size: 1.3rem;
+
+}
+
+.footer-item-list{
+    padding: 0;
+} 
