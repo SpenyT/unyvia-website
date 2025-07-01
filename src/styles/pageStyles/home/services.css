@@ -51,9 +51,9 @@
 
 .service-menu-card{
     font-family: 'Inter','Roboto',Arial, sans-serif;
-    width: 20rem;
+    width: 18rem;
    
-    min-height: 320px;
+    min-height: 300px;
     padding: 1.5em;
     display: flex;
     flex-direction: column;
@@ -69,18 +69,14 @@
 }
 
 .service-menu-card-title h4{
-
     font-size: 1.35rem;
     font-weight: 700;
     letter-spacing: 0.01em;
     margin: 0 0 0.25em 0;
-    text-transform: capitalize
-    
-
+    text-transform: capitalize 
 }
 
-.service-menu-card-subtitle{
-    
+.service-menu-card-subtitle{    
     font-size: 1.05rem;
     font-weight: 500;
     margin-bottom: 0;

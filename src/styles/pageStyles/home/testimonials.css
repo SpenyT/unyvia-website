@@ -1,25 +1,22 @@
-.testimonials-container{
+.testimonials-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     margin-bottom: 3em;
     padding: 0 0.5rem;
-   
-   
-   
-    
-    
+
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 90%);
+    mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 90%);
 }
 
-.testimonials-intro h2{
-  text-align: center;
+.testimonials-intro h2 {
+    text-align: center;
     font-size: 1.7rem;
-
 }
 
-.testimonial-divider{
+.testimonial-divider {
     margin-top: 1em;
     width: 30%;
     height:2px;
@@ -33,79 +30,50 @@
 .testimonials-card-container {
   width: 100%;
   margin-top: 3rem;
- 
-
-
 }
 
 
 
-.testminonial-card{
-    
+.testminonial-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
     min-height: 357px;
     
-   
-  
     /* text-align: center; */
     background-color:var(--unyvia_navy) ;
     border: 1.5px solid var(--unyvia_navy3);
     border-radius: 15px;
 
-   
     padding: 0.5rem 2rem 2rem 2rem;
-
-    
 }
 
-.testimonial-author{
+.testimonial-author {
     margin: 1rem 0rem 0rem 0rem;
     font-size: 1rem;
-     font-weight: 1000;
+    font-weight: 1000;
 }
 
-.testimonial-authore-role{
+.testimonial-authore-role {
     margin: 0rem 0rem 0rem 0rem;
     font-weight: 400;
     font-size: 1rem;
-    
 }
 
-.testimonial-text-box{
-  
-
-
+.testimonial-text-box {
     margin:0rem 0rem 0rem 0rem;
     width: 100%;
 
 }
 
 .testimonial-text{
-   
-
-    font-size: 1rem
-
-
+   font-size: 1rem
 }
 
 .testimonial-quote{
-   
     font-size: 2.4em;
     align-self: start;
-    
-   
-}
-
-
-.testimonials-swiper-continuous .swiper-slide{
- 
-  
-
-
-
 }
 
 .testimonials-swiper-continuous .swiper-pagination {

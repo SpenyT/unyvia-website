@@ -20,10 +20,9 @@ export default function Home() {
 
             <div className="content">
              <Hero/>
-             <Services></Services>
-             <Testimonials></Testimonials>
-             <CTA></CTA>
-             
+             <Services/>
+             <Testimonials/>
+             <CTA/>
             </div>
 
             

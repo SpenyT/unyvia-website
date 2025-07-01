@@ -1,36 +1,26 @@
-.cta-container{
+.cta-container {
     margin: 1rem 4rem 2rem 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
-    width: 75vw;
-   
-  
+    width: 100%;
 }
 
 .cta-content{
-     height: auto;
+    height: auto;
     background-color: var(--unyvia_navy);
     border: 1.5px solid var(--unyvia_navy3);
     padding:3rem 6rem;
-    width:80%;
-    max-width: 1400px; 
+    width:100%;
+    max-width: none; 
     border-radius: 15px;
-}
-
-.cta-header{
-
 }
 
 .cta-header h1{
     margin: 0 0 0 0;
     font-size: 2.5rem;
-}
-
-.cta-subheader{
-
 }
 
 .cta-metrics-container{
@@ -93,7 +83,7 @@ p.metric-text{
     justify-content: center;
     text-align: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
 }
 
 .cta-content{
@@ -105,17 +95,9 @@ p.metric-text{
     border-radius: 15px;
 }
 
-.cta-header{
-
-}
-
 .cta-header h1{
     margin: 0 0 0 0;
     font-size: 2.5rem;
-}
-
-.cta-subheader{
-
 }
 
 .cta-metrics-container{
