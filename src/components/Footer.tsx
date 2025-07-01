@@ -18,7 +18,7 @@ export default function Footer() {
                                         <li>Lighting</li>
                                         <li>Energy Audits</li>
                                         <li>Decarbonization</li>
-                                        <li>Energy as a Service (Eaas)</li>
+                                        <li>EaaS</li>
                                         <li>Solar</li>
                                     </ul>
                             </div>
@@ -34,7 +34,7 @@ export default function Footer() {
                     </div>
                      <div className="footer-item">
                             <div className="footer-item-list-container">
-                                <div className="footer-item-title">Social Media</div>
+                                <div className="footer-item-title">Socials</div>
                                 <ul className="footer-item-list">
                                     <li>Instagram</li>
                                     <li>Facebook</li>
