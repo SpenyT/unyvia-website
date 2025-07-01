@@ -1,0 +1,315 @@
+.cta-container{
+    margin: 1rem 4rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 75vw;
+   
+  
+}
+
+.cta-content{
+     height: auto;
+    background-color: var(--unyvia_navy);
+    border: 1.5px solid var(--unyvia_navy3);
+    padding:3rem 6rem;
+    width:80%;
+    max-width: 1400px; 
+    border-radius: 15px;
+}
+
+.cta-header{
+
+}
+
+.cta-header h1{
+    margin: 0 0 0 0;
+    font-size: 2.5rem;
+}
+
+.cta-subheader{
+
+}
+
+.cta-metrics-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    
+    
+    margin: 2rem 0 2rem 0;
+}
+.cta-metric{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 20rem;
+    border-radius: 10px;
+    
+   
+    
+}
+
+.cta-metric h2{
+   
+    font-size: 2rem;
+    margin: 0;
+}
+
+p.metric-text{
+    max-width: 250px;
+    height: 48px;
+}
+
+.cta-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    
+    
+}
+
+.vertical_divider{
+    width: 1.5px;
+    height: auto;
+    background-color: var(--unyvia_navy3);
+    margin: 0 2rem 0 2rem ;
+}
+
+
+
+.cta-container{
+    margin: 1rem 4rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.cta-content{
+    height: auto;
+    background-color: var(--unyvia_navy);
+    border: 1.5px solid var(--unyvia_navy3);
+    padding: 3rem 6rem;
+    width: 80%;
+    border-radius: 15px;
+}
+
+.cta-header{
+
+}
+
+.cta-header h1{
+    margin: 0 0 0 0;
+    font-size: 2.5rem;
+}
+
+.cta-subheader{
+
+}
+
+.cta-metrics-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 2rem 0 2rem 0;
+}
+
+.cta-metric{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 20rem;
+    border-radius: 10px;
+}
+
+.cta-metric h2{
+    margin: 0;
+}
+
+p.metric-text{
+    max-width: 250px;
+    height: 48px;
+}
+
+.cta-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.vertical_divider{
+    width: 1.5px;
+    height: auto;
+    background-color: var(--unyvia_navy3);
+    margin: 0 2rem 0 2rem;
+}
+
+.cta-button button{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2em 1.2em;
+    color: white;
+    border-radius: 5px;
+    background: linear-gradient(15deg, var(--unyvia_green), var(--unyvia_lightgreen), var(--unyvia_green)) no-repeat;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+    background-size: 300%;
+    background-position: left center;
+    transition: all 0.2s ease-in-out;
+}
+
+
+@media screen and (max-width: 1024px) {
+    /* .cta-container {
+        margin: 1rem 2rem 2rem 2rem;
+    }
+    
+    .cta-content {
+        padding: 2.5rem 4rem;
+        width: 90%;
+    }
+    
+    .cta-metric {
+        width: 15rem;
+    }
+    
+    .vertical_divider {
+        margin: 0 1rem 0 1rem;
+    } */
+}
+
+/* Mobile landscape and small tablets */
+@media screen and (max-width: 768px) {
+    .cta-container {
+        margin: 1rem 1rem 2rem 1rem;
+    }
+    
+    .cta-content {
+        padding: 2rem 2rem;
+        width: 95%;
+    }
+    
+    .cta-header h1 {
+        font-size: 2rem;
+    }
+    
+    .cta-subheader h3 {
+        font-size: 1rem;
+    }
+    
+    .cta-metrics-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .cta-metric {
+        width: 100%;
+    }
+    
+    .cta-metric h2 {
+        font-size: 1.5rem;
+    }
+    
+    p.metric-text {
+        max-width: 100%;
+        height: auto;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .vertical_divider {
+        display: none;
+    }
+}
+
+/* Mobile portrait */
+@media screen and (max-width: 480px) {
+    .cta-container {
+        margin: 0.5rem 0.5rem 1.5rem 0.5rem;
+    }
+    
+    .cta-content {
+        padding: 1.5rem 1rem;
+        width: 98%;
+        border-radius: 10px;
+    }
+    
+    .cta-header h1 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+    
+    .cta-subheader h3 {
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+    
+    .cta-metrics-container {
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .cta-metric h2 {
+        font-size: 1.2rem;
+    }
+    
+    p.metric-text {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    
+    .cta-button button {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .cta-button h5 {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Very small screens */
+@media screen and (max-width: 320px) {
+    .cta-content {
+        padding: 1rem 0.75rem;
+    }
+    
+    .cta-header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .cta-subheader h3 {
+        font-size: 0.8rem;
+    }
+    
+    .cta-metric h2 {
+        font-size: 1rem;
+    }
+    
+    p.metric-text {
+        font-size: 0.75rem;
+    }
+}
