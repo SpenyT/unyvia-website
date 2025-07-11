@@ -16,7 +16,7 @@ export interface UseIntersectionObserverReturn {
     intersectionRatio: number;
 }
 
-export const useIntersectionObserver = ( options: UseIntersectionObserverOptions = {} ): UseIntersectionObserverReturn => {
+export const useIntersectionObserver = ( options: UseInterseconObserverOptions = {} ): UseIntersectionObserverReturn => {
     const {
         root = null,
         rootMargin = '0px',

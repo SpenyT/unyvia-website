@@ -1,3 +1,4 @@
+import { RefObject } from "react";
 
 import '../../styles/pageStyles/home/home.css';
 import '../../styles/pageStyles/home/services.css'
@@ -8,16 +9,18 @@ import LEDLogo from '../../assets/led.svg?react'
 import DecarbonLogo from '../../assets/decarbon.svg?react'
 import EnergyAsaService from '../../assets/eas.svg?react'
 import SolarLogo from '../../assets/solar.svg?react'
-// import Hero from '../components/home/Hero.tsx';
 import ServiceMenuCard from './ServiceCard';
 
 
+interface ServicesProps {
+    servicesRef: RefObject<HTMLDivElement | null>;
+}
 
-export default function Services() {
+export default function Services({servicesRef} : ServicesProps) {
 
     return (
         <>
-            <div className="service-content">
+            <div className="service-content" ref={servicesRef}>
                 <div className="service-intro">
                     <h2>
                     Bring your savings to the next level
